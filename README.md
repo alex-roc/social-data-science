@@ -14,43 +14,63 @@ Este curso explora la intersección entre ciencia de datos y ciencias sociales, 
 
 ## Estructura del Curso
 
-### Módulo 1: Fundamentos y Flujo de Trabajo
-**Archivo**: `notebook-0.ipynb` y `notebook-1.ipynb`
+### Módulo 0: Introducción y Fundamentos
+**Archivo**: `0.ipynb`
 
 - Introducción a Social Data Science y sus diferencias con Data Science tradicional
 - Habilidades núcleo: sustantivas, estadística y programación
 - Retos típicos: sesgo, representatividad, privacidad, validez
 - Flujo de trabajo completo desde problema hasta comunicación
-- **Ejercicio práctico**: Análisis demográfico de municipios bolivianos (2012-2024)
-- **Ejercicio práctico**: Adopción digital y desigualdad en Sudamérica (2000-2024)
 
-### Módulo 2: Análisis de Texto
-**Archivo**: `notebook-2.ipynb`
+### Módulo 1: Análisis de Datos y APIs
+**Archivos**: `1.1. pandas.ipynb` y `1.2 internet.ipynb`
 
-- Fundamentos de NLP en Social Data Science
-- Preprocesamiento con spaCy para español
-- Representación de texto: de bolsa de palabras a embeddings
-- Análisis de sentimiento con múltiples enfoques
-- Topic modeling con LDA y BERTopic
-- **Ejercicio práctico**: Análisis de narrativas mediáticas en Bolivia, Argentina y Perú
+- **1.1 Pandas**: Estructuras de datos y operaciones básicas con datos tabulares
+  - Series y DataFrames con datos de estudiantes
+  - Operaciones de filtrado, agregación y manipulación
+  - Estadísticas descriptivas y análisis exploratorio
+- **1.2 Internet**: APIs y datos web
+  - Consumo de APIs y datos abiertos
+  - Ejercicio práctico con datos demográficos y adopción digital
+
+### Módulo 2: Procesamiento de Lenguaje Natural
+**Archivos**: `2.1. spacy.ipynb` y `2.2. noticias.ipynb`
+
+- **2.1 spaCy**: Fundamentos de procesamiento de texto
+  - Estructuras de datos (Doc, Token, Span)
+  - Análisis morfológico y sintáctico
+  - Entidades nombradas y análisis básico
+  - Ejercicios con textos de ejemplo
+- **2.2 Noticias**: Análisis de narrativas mediáticas
+  - Análisis de sentimiento avanzado
+  - Topic modeling y extracción de temas
+  - Ejercicio práctico con medios bolivianos
 
 ### Módulo 3: Análisis de Redes Sociales
-**Archivo**: `notebook-3.ipynb`
+**Archivos**: `3.1. networkx.ipynb` y `3.2. reddit.ipynb`
 
-- Modelado de redes sociales como grafos
-- Métricas de centralidad e influencia
-- Detección de comunidades
-- Análisis de difusión y polarización
-- **Ejercicio práctico**: Red de interacciones en subreddits latinoamericanos
+- **3.1 NetworkX**: Fundamentos de análisis de redes
+  - Tipos de grafos (dirigidos, no dirigidos, ponderados)
+  - Métricas de centralidad e importancia
+  - Visualización de redes y análisis básico
+  - Ejercicios con redes sociales de ejemplo
+- **3.2 Reddit**: Análisis de comunidades digitales
+  - Red de interacciones en subreddits latinoamericanos
+  - Detección de comunidades y polarización
+  - Análisis de difusión de información
 
-### Módulo 4: Análisis Espacial
-**Archivo**: `notebook-4.ipynb`
+### Módulo 4: Análisis Espacial y Geográfico
+**Archivos**: `4.1. geopandas.ipynb` y `4.2. salud.ipynb`
 
-- Fundamentos de datos geoespaciales
-- Servicios y fuentes de datos abiertos (OSM, WFS/WMS)
-- Operaciones espaciales con GeoPandas
-- Análisis territorial y mapas coropléticos
-- **Ejercicio práctico**: Disponibilidad territorial de centros de salud en Cochabamba
+- **4.1 GeoPandas**: Fundamentos de datos geoespaciales
+  - Geometrías básicas (puntos, líneas, polígonos)
+  - GeoDataFrames y operaciones espaciales
+  - Análisis de distancias, buffers y relaciones espaciales
+  - Visualización de mapas temáticos y análisis de cobertura
+- **4.2 Salud**: Análisis territorial de servicios de salud
+  - Disponibilidad territorial de centros de salud en Cochabamba
+  - Análisis de accesibilidad y cobertura geográfica
+  - Mapas coropléticos y análisis de inequidades espaciales
 
 
 ## Tecnologías y Herramientas
@@ -64,8 +84,15 @@ Este curso explora la intersección entre ciencia de datos y ciencias sociales, 
 - **Visualización**: matplotlib, seaborn, plotly
 - **Procesamiento de texto**: spaCy, scikit-learn, pysentimiento
 - **Redes sociales**: networkx, community
-- **Análisis espacial**: geopandas, folium, osmnx
+- **Análisis espacial**: geopandas, folium, osmnx, shapely
 - **APIs y datos**: requests, wbgapi
+- **Análisis estadístico**: scipy, statsmodels
+
+### Librerías de Apoyo
+- **Geometrías**: shapely (integrada con geopandas)
+- **Mapas interactivos**: folium, contextily
+- **Machine Learning**: scikit-learn, nltk
+- **Manejo de datos**: openpyxl, json
 
 ### Fuentes de Datos
 - World Bank Open Data
@@ -81,11 +108,15 @@ Este curso explora la intersección entre ciencia de datos y ciencias sociales, 
 social-data-science/
 ├── README.md                 # Este archivo
 ├── fuentes-datos.csv        # Catálogo de fuentes de datos
-├── notebook-0.ipynb        # Módulo 1: Fundamentos
-├── notebook-1.ipynb        # APIs y datos abiertos
-├── notebook-2.ipynb        # Módulo 2: Análisis de texto
-├── notebook-3.ipynb        # Módulo 3: Redes sociales
-├── notebook-4.ipynb        # Módulo 4: Análisis espacial
+├── 0.ipynb                  # Módulo 0: Introducción y fundamentos
+├── 1.1. pandas.ipynb       # Módulo 1.1: Estructuras de datos con pandas
+├── 1.2 internet.ipynb      # Módulo 1.2: APIs y datos web
+├── 2.1. spacy.ipynb        # Módulo 2.1: Procesamiento de texto con spaCy
+├── 2.2. noticias.ipynb     # Módulo 2.2: Análisis de narrativas mediáticas
+├── 3.1. networkx.ipynb     # Módulo 3.1: Análisis de redes con NetworkX
+├── 3.2. reddit.ipynb       # Módulo 3.2: Comunidades digitales en Reddit
+├── 4.1. geopandas.ipynb    # Módulo 4.1: Análisis geoespacial con GeoPandas
+├── 4.2. salud.ipynb        # Módulo 4.2: Análisis territorial de salud
 ├── cache/                   # Cache de consultas API
 └── data/                    # Datos de ejemplo
 ```
@@ -93,7 +124,7 @@ social-data-science/
 ## Requisitos Previos
 
 ### Conocimientos
-- Fundamentos de programación en Python
+- Fundamentos básicos bde programación en Python
 - Estadística descriptiva básica
 - Conceptos básicos de ciencias sociales
 
@@ -102,10 +133,4 @@ social-data-science/
 # Clonar el repositorio
 git clone https://github.com/alex-roc/social-data-science.git
 cd social-data-science
-
-# Instalar dependencias (recomendado usar conda o virtualenv)
-pip install pandas numpy matplotlib seaborn
-pip install spacy scikit-learn networkx geopandas
-pip install requests wbgapi pysentimiento
-python -m spacy download es_core_news_md
 ```
